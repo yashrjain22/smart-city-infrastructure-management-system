@@ -1,0 +1,185 @@
+:root {
+    --green-dark: #0b5e3b;
+    --green-main: #2d6a4f;
+    --green-soft: #f1faf4;
+    --green-light: #d8f3dc;
+    --text-dark: #1f2937;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: var(--green-soft);
+    color: var(--text-dark);
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #0b5e3b, #1b7a4a);
+    color: white;
+    padding: 18px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+nav a.active,
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* BREADCRUMB */
+.breadcrumb {
+    background: #e6f4ea;
+    padding: 10px 50px;
+    font-size: 13px;
+    color: #14532d;
+}
+
+/* MAIN */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 14px;
+    padding: 50px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+main h2 {
+    color: var(--green-dark);
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+/* TRACK INPUT */
+.track-box {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.track-box input {
+    flex: 1;
+    padding: 14px;
+    border-radius: 6px;
+    border: 1px solid #c7e6d4;
+    font-size: 14px;
+}
+
+.track-box button {
+    background: var(--green-main);
+    color: white;
+    border: none;
+    padding: 14px 22px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.track-box button:hover {
+    background: var(--green-dark);
+}
+
+/* RESULT CARD */
+.complaint-card {
+    background: var(--green-soft);
+    border-left: 6px solid var(--green-main);
+    padding: 25px;
+    border-radius: 10px;
+    animation: fadeUp 0.6s ease;
+}
+
+.complaint-card h3 {
+    color: var(--green-dark);
+    margin-bottom: 10px;
+}
+
+.complaint-card p {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status.Pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status.Resolved {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status.InProgress {
+    background: #cce5ff;
+    color: #004085;
+}
+
+.complaint-card img {
+    margin-top: 15px;
+    max-width: 100%;
+    border-radius: 8px;
+    border: 1px solid #c7e6d4;
+}
+
+/* FOOTER */
+footer {
+    background: var(--green-dark);
+    color: #e5e7eb;
+    padding: 30px 50px;
+    font-size: 13px;
+    margin-top: 60px;
+}
+
+footer a {
+    color: #b7e4c7;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

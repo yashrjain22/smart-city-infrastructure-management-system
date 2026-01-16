@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Complaint | Smart City Infrastructure Management System</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="complaint.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Smart City Infrastructure Management System</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="complaint.html">Register Complaint</a>
+            <a href="track.html">Track Complaint</a>
+            <a href="admin.html">Admin</a>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        Home / Citizen Services / Register Complaint
+    </div>
+
+    <main>
+        <h2>Register a Civic Infrastructure Complaint</h2>
+        <p>
+            Citizens can submit grievances related to municipal infrastructure and essential
+            services using the form below. Please provide accurate information to enable
+            timely resolution.
+        </p>
+
+        <div class="info-box">
+            <strong>Important:</strong> Upon successful submission, a unique complaint reference
+            number will be generated. Please retain this number for tracking the status of your complaint.
+        </div>
+
+        <form id="complaintForm">
+            <div class="form-group">
+                <label><i class="fa-solid fa-user"></i> Full Name</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fa-solid fa-envelope"></i> Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fa-solid fa-list"></i> Complaint Category</label>
+                <select id="category" required>
+                    <option value="">Select category</option>
+                    <option>Road & Potholes</option>
+                    <option>Water Supply</option>
+                    <option>Electricity & Street Lighting</option>
+                    <option>Sanitation & Waste</option>
+                    <option>Other Civic Issues</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fa-solid fa-location-dot"></i> Location</label>
+                <input type="text" id="location" placeholder="Auto-detected location" readonly>
+            </div>
+
+
+
+            <div class="form-group full location-actions">
+                <p class="location-note">
+                    Location incorrect? Choose an option below:
+                </p>
+
+                <div class="location-btn-group">
+                    <button type="button" id="manualLocBtn" class="loc-btn manual-btn">
+                        <i class="fa-solid fa-pen"></i> Enter Location Manually
+                    </button>
+
+                    <button type="button" class="loc-btn map-btn"
+                        onclick="window.open('https://www.google.com/maps', '_blank')">
+                        <i class="fa-solid fa-map-location-dot"></i> Pin on Google Maps
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group full" id="manualLocationBox" style="display:none;">
+                <label>Enter Location Manually</label>
+                <input type="text" id="manualLocation" placeholder="Enter landmark / address" />
+            </div>
+
+            <div class="form-group full">
+                <label><i class="fa-solid fa-comment"></i> Complaint Description</label>
+                <textarea id="description" placeholder="Describe the issue in detail" required></textarea>
+            </div>
+
+            <div class="form-group full">
+                <label><i class="fa-solid fa-image"></i> Upload Supporting Image (optional)</label>
+                <input type="file" id="image" accept="image/*">
+            </div>
+
+            <div class="form-group full">
+                <button class="submitBtn" id="submitBtn">
+                    <i class="fa-solid fa-paper-plane"></i> Submit Complaint
+                </button>
+            </div>
+        </form>
+        <!-- Toast Notification -->
+        <div id="toast" class="toast">
+            <p id="toastMessage"></p>
+            <button id="copyIdBtn">📋 Copy ID</button>
+        </div>
+
+    </main>
+
+    <footer>
+        © Government of India | Smart City Infrastructure Management System
+        <br>
+        <a href="https://www.india.gov.in/" target="_blank">National Portal of India</a> |
+        <a href="https://www.digitalindia.gov.in/" target="_blank">Digital India</a> |
+        <a href="https://smartcities.gov.in/" target="_blank">Smart Cities Mission</a>
+    </footer>
+
+    <script src="complaint.js"></script>
+</body>
+
+</html>

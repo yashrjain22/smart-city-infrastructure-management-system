@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Track Complaint | Smart City Infrastructure Management System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="track.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Smart City Infrastructure Management System</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="complaint.html">Register Complaint</a>
+            <a href="track
+            .html" class="active">Track Complaint</a>
+            <a href="admin.html">Admin</a>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        Home / Citizen Services / Track Complaint
+    </div>
+
+    <main>
+        <h2>Track Complaint Status</h2>
+        <p>
+            Enter your complaint reference number below to view the current status
+            and details of your submitted grievance.
+        </p>
+
+        <div class="track-box">
+            <input type="text" id="trackId" placeholder="Enter Complaint ID (e.g. CMP-XXXXXX)">
+            <button id="trackBtn">
+                <i class="fa-solid fa-magnifying-glass"></i> Track
+            </button>
+        </div>
+
+        <div id="trackResult"></div>
+    </main>
+
+    <footer>
+        © Government of India | Smart City Infrastructure Management System
+        <br>
+        <a href="https://www.india.gov.in/" target="_blank">National Portal of India</a> |
+        <a href="https://smartcities.gov.in/" target="_blank">Smart Cities Mission</a>
+    </footer>
+
+    <script src="track.js"></script>
+</body>
+
+</html>

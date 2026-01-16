@@ -1,0 +1,310 @@
+:root {
+    --green-dark: #0b5e3b;
+    --green-main: #2d6a4f;
+    --green-soft: #f1faf4;
+    --green-light: #d8f3dc;
+    --text-dark: #1f2937;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: var(--green-soft);
+    color: var(--text-dark);
+    line-height: 1.7;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(90deg, #0b5e3b, #1b7a4a);
+    color: white;
+    padding: 18px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* BREADCRUMB */
+.breadcrumb {
+    background: #e6f4ea;
+    padding: 10px 50px;
+    font-size: 13px;
+    color: #14532d;
+}
+
+/* MAIN */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 14px;
+    padding: 50px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    animation: fadeUp 0.8s ease;
+}
+
+main h2 {
+    color: var(--green-dark);
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+/* FORM */
+form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #14532d;
+}
+
+.form-group i {
+    margin-right: 6px;
+    color: var(--green-main);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 14px;
+    border-radius: 6px;
+    border: 1px solid #c7e6d4;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--green-main);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.full {
+    grid-column: 1 / -1;
+}
+
+/* BUTTON */
+button {
+    background: var(--green-main);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: fit-content;
+}
+
+button:hover {
+    background: var(--green-dark);
+}
+
+/* INFO BOX */
+.info-box {
+    background: var(--green-light);
+    padding: 20px;
+    border-left: 6px solid var(--green-main);
+    border-radius: 10px;
+    margin-bottom: 35px;
+    font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+    background: var(--green-dark);
+    color: #e5e7eb;
+    padding: 30px 50px;
+    font-size: 13px;
+    margin-top: 60px;
+}
+
+footer a {
+    color: #b7e4c7;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* ANIMATION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    main {
+        padding: 30px;
+    }
+}
+
+.location-actions {
+    background: #e6f4ea;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #2d6a4f;
+}
+
+.submitBtn svg {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+
+}
+
+.location-note {
+    font-size: 14px;
+    color: #14532d;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.location-btn-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.loc-btn {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s ease;
+}
+
+/* Manual entry button */
+.manual-btn {
+    background: #2d6a4f;
+    color: white;
+}
+
+.manual-btn:hover {
+    background: #1b4332;
+}
+
+/* Google Maps button */
+.map-btn {
+    background: white;
+    color: #2d6a4f;
+    border: 1px solid #2d6a4f;
+}
+
+.map-btn:hover {
+    background: #d8f3dc;
+}
+
+/* Manual input box */
+#manualLocationBox input {
+    margin-top: 6px;
+}
+
+/* Ensure icons inside green buttons are white */
+.manual-btn i,
+.manual-btn svg {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+}
+
+/* Optional: better contrast on hover */
+.manual-btn:hover i,
+.manual-btn:hover svg {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+}
+
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #14532d;
+    color: #fff;
+    padding: 18px 20px;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+    animation: slideUp 0.4s ease;
+}
+
+.toast button {
+    background: #d8f3dc;
+    color: #14532d;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.toast button:hover {
+    background: #b7e4c7;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
